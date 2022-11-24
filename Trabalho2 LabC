@@ -1,0 +1,220 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNOviNcltmkRt4uuLGKyqHK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Lualuh/Temp.2.c/blob/main/Trabalho2%20LabC\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Declaração de Variáveis e adição das bibliotecas necessárias"
+      ],
+      "metadata": {
+        "id": "bIC5bL7HvB4r"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Versão 1 (Versão básica do jogo Pedra Papel Tesoura)."
+      ],
+      "metadata": {
+        "id": "xbh5ZWXe1Myo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#include <stdio.h>\n",
+        "#include <stdlib.h>\n",
+        "#include <time.h>\n",
+        "int main() {\n",
+        "\n",
+        " int pontos_jogador=0, pontos_comp=0;\n",
+        " int jogador, comp,d;\n",
+        "\n",
+        "    \n",
+        "    do {\n",
+        "    printf (\"0. Pedra\\n\");\n",
+        "    printf (\"1. Papel\\n\");\n",
+        "    printf (\"2. Tesoura\\n\");\n",
+        "    printf (\"3. Sair\\n\");\n",
+        "    scanf (\"%d\", &jogador);\n",
+        "    if (jogador < 0 || jogador >=3)\n",
+        "    {\n",
+        "        exit(0);\n",
+        "    }\n",
+        "    srand(time(NULL));\n",
+        "     comp = rand() % 3; \n",
+        "    switch(comp)\n",
+        "    {\n",
+        "        case 0: printf (\"COMP -> Pedra\\n\"); break;\n",
+        "        case 1: printf (\"COMP -> Papel\\n\"); break;\n",
+        "        case 2: printf (\"COMP -> Tesoura\\n\"); break;\n",
+        "\t\t\n",
+        "    if ((jogador == 0 && comp==2) || (jogador == 1 && comp == 0) || (jogador == 2 && comp == 1)){\n",
+        "        \n",
+        "            printf(\"Voce venceu!\\n\");\n",
+        "            pontos_jogador++;\n",
+        "    } \n",
+        "    else if (jogador == comp) {\n",
+        "            printf (\"Empate\");\n",
+        "   } else {\n",
+        "           printf (\"Comp venceu!\\n\");\n",
+        "            pontos_comp++;\n",
+        "\n",
+        "        }\n",
+        "       \n",
+        "\tdo {\n",
+        "\t\tprintf (\"Deseja jogar novamente? 1.sim 2.não\");\n",
+        "\t\tscanf (\"%d\", &d);\n",
+        "\t\tif (d!=1&&d!=2) \n",
+        "\t\t\tprintf (\"Inválido\");\n",
+        "\t\t}while (d!=1&&d!=2);\n",
+        "\t}while (d==1);\n",
+        "}\n",
+        "\n",
+        "\n",
+        "       "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 133
+        },
+        "id": "3Mzc15Elu9Oh",
+        "outputId": "643a7d5c-c458-49c5-ef14-897fd5c8f547"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-4-5d84b38e20ee>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    int main() {\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Versão 2(mais avançada do jogo, adicionando 2 elementos:Sponk e Largarto)."
+      ],
+      "metadata": {
+        "id": "C9bS8nZ_1AdT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 133
+        },
+        "id": "NrnQjZTZtMYp",
+        "outputId": "2c212860-45ba-4222-abb6-e4b8b92a18af"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-7-05676e9d200f>\"\u001b[0;36m, line \u001b[0;32m5\u001b[0m\n\u001b[0;31m    int main () {\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ],
+      "source": [
+        "#include <stdio.h>\n",
+        "#include <stdlib.h>\n",
+        "#include <time.h>\n",
+        "\n",
+        "int main () {\n",
+        "\n",
+        " int pontos_jogador=0, pontos_comp=0;\n",
+        " int jogador, comp,d;\n",
+        "\n",
+        "    \n",
+        "    do {\n",
+        "    printf (\"0. Pedra\\n\");\n",
+        "    printf (\"1. Papel\\n\");\n",
+        "    printf (\"2. Tesoura\\n\");\n",
+        "    printf (\"3. Largarto\");\n",
+        "    printf (\"4. Sponk\");\n",
+        "    printf (\"5. Sair\\n\");\n",
+        "    scanf (\"%d\", &jogador);\n",
+        "    if (jogador < 0 || jogador >=5)\n",
+        "    {\n",
+        "        exit(0);\n",
+        "    }\n",
+        "    srand(time(NULL));\n",
+        "     comp = rand() % 3; \n",
+        "    switch(comp)\n",
+        "    {\n",
+        "        case 0: printf (\"COMP -> Pedra\\n\"); break;\n",
+        "        case 1: printf (\"COMP -> Papel\\n\"); break;\n",
+        "        case 2: printf (\"COMP -> Tesoura\\n\"); break;\n",
+        "\t\tcase 3: printf (\"COMP -> Largarto\\n\"); break;   \n",
+        "\t\tcase 4: printf (\"COMP -> Sponk\\n\"); break;\n",
+        "    }\n",
+        "    if ((jogador == 0 && comp==2) || (jogador == 1 && comp == 0) || (jogador == 2 && comp == 1)|| \n",
+        "    (jogador == 0 && comp==3) || (jogador==3 && comp==4) || (jogador==4 && comp==2) || (jogador==2 && comp==3) || (jogador==3 && comp==1) || \n",
+        "    (jogador==1 && comp==4) || (jogador==4 && comp==0)){\n",
+        "        \n",
+        "            printf(\"Voce venceu!\\n\");\n",
+        "            pontos_jogador++;\n",
+        "    } \n",
+        "    else if (jogador == comp) {\n",
+        "            printf (\"Empate\");\n",
+        "   } else {\n",
+        "           printf (\"Comp venceu!\\n\");\n",
+        "            pontos_comp++;\n",
+        "\n",
+        "        }\n",
+        "       \n",
+        "\tdo {\n",
+        "\t\tprintf (\"Deseja jogar novamente? 1.sim 2.não\");\n",
+        "\t\tscanf (\"%d\", &d);\n",
+        "\t\tif (d!=1&&d!=2) \n",
+        "\t\t\tprintf (\"Inválido\");\n",
+        "\t\t}while (d!=1&&d!=2);\n",
+        "\t}while (d==1);\n",
+        "}\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "mp3mYJrfx1cQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
